@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https:// keandfan.github.io/blog">
-  <title>Hexo</title>
+  <title>Tag: js学习 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="https:// keandfan.github.io/blog/index.html">
+<meta property="og:url" content="https:// keandfan.github.io/blog/tags/js学习/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -138,39 +138,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-去除数组重复元素" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/blog/2018/05/14/去除数组重复元素/" class="archive-article-date">
+  	<time datetime="2018-05-14T12:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/05/14/去除数组重复元素/">去除数组重复元素</a>
+      <a class="archive-article-title" href="/blog/2018/05/14/去除数组重复元素/">去除数组重复元素</a>
     </h1>
   
 
-        
-        <a href="/blog/2018/05/14/去除数组重复元素/" class="archive-article-date">
-  	<time datetime="2018-05-14T12:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>给数组去除重复元素（原生js） <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">//         去除数组重复元素</span><br><span class="line">           var arr = [1,2,2,3,5,4,8,6,4,2,47,5,9,3,20,3];</span><br><span class="line">           //将数组转为对象，将key传入对象，对象中key值不允许重复</span><br><span class="line">              var toNewObject = function(arr)&#123;</span><br><span class="line">              	var obj = &#123;&#125;;</span><br><span class="line">              	var len = arr.length;</span><br><span class="line">              	for(var i = 0;i&lt;len;i++)&#123;</span><br><span class="line">              		obj[arr[i]] = true;</span><br><span class="line">              	&#125;</span><br><span class="line">              	return obj;</span><br><span class="line">              &#125;</span><br><span class="line">               //将对象转成数组</span><br><span class="line">              var toNewArr = function(obj)&#123;</span><br><span class="line">              	var arr = [];</span><br><span class="line">              	for(var attr in obj)&#123;</span><br><span class="line">              		if(obj.hasOwnProperty(attr))&#123;</span><br><span class="line">              			arr.push(attr);</span><br><span class="line">              		  &#125;</span><br><span class="line">              		&#125;</span><br><span class="line">              	   return arr;</span><br><span class="line">              	&#125;</span><br><span class="line">              //通过函数输出筛选后的数组</span><br><span class="line">              var unique = function(arr)&#123;</span><br><span class="line">              	  var obj = toNewObject(arr);</span><br><span class="line">              	  var newArr = toNewArr(obj);</span><br><span class="line">              	  return newArr;</span><br><span class="line">              &#125;</span><br><span class="line">             console.log(unique(arr));</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>！[结果]（去除数组重复元素/1.png）</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -182,182 +177,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/05/14/去除数组重复元素/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-ES6学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/05/14/ES6学习/">ES6学习</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/05/14/ES6学习/" class="archive-article-date">
-  	<time datetime="2018-05-14T12:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/05/14/ES6学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-U盘启动盘制作与系统安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/05/14/U盘启动盘制作与系统安装/">U盘启动盘制作与系统安装</a>
-    </h1>
-  
-
-        
-        <a href="/blog/2018/05/14/U盘启动盘制作与系统安装/" class="archive-article-date">
-  	<time datetime="2018-05-14T09:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="U盘制作（求人不如求己系列-最纯净的U盘制作以及系统安装）（以下均为个人喜好）"><a href="#U盘制作（求人不如求己系列-最纯净的U盘制作以及系统安装）（以下均为个人喜好）" class="headerlink" title="U盘制作（求人不如求己系列-最纯净的U盘制作以及系统安装）（以下均为个人喜好）"></a>U盘制作（求人不如求己系列-最纯净的U盘制作以及系统安装）（以下均为个人喜好）</h3><ul>
-<li><p>准备工具<br> U盘、WPE（tips:U盘最好8G以上，制作U盘本身只需要几M，但是一般制作U盘是为了装系统，一般系统大小是大于4G的）</p>
-</li>
-<li><p>为什么推荐WPE呢？（我不解释你就不下了是吧）：<br>  WPE相比较与什么老某桃、某菜什么一堆启动盘来说，绝对纯净（希望后续版本不要打我脸），绝对纯净的意思呢，就是你用WPE制作的U盘，将系统放进u盘里，安装完系统，然后开机不会发现那些有的没的广告（前提系统没有广告，系统的事后面再说，急个啥子）。<br>  WPE官网：<a href="http://uds8.njxdmyd.cn/109.html" target="_blank" rel="noopener">http://uds8.njxdmyd.cn/109.html</a></p></li></ul>
-        
-          <a class="article-more-a" href="/blog/2018/05/14/U盘启动盘制作与系统安装/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活常用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/05/14/U盘启动盘制作与系统安装/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -381,10 +213,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
