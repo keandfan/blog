@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https:// keandfan.github.io/blog">
-  <title>Archives: 2018/5 | Hexo</title>
+  <title>遍历多维数组 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https:// keandfan.github.io/blog/archives/2018/05/index.html">
+  <meta name="description" content="遍历多维数组 遍历一维数组（Array each方法） 1234var arr = [1,2,3,4,5];arr.forEach(function(item,index,array)&amp;#123;	alert(item);  //1 2 3 4 5 	&amp;#125;);  自己实现一个Array each方法，能遍历多维数组 1234567891011121314151617181920212223">
+<meta name="keywords" content="js学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遍历多维数组">
+<meta property="og:url" content="https:// keandfan.github.io/blog/2018/05/14/遍历多维数组/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="遍历多维数组 遍历一维数组（Array each方法） 1234var arr = [1,2,3,4,5];arr.forEach(function(item,index,array)&amp;#123;	alert(item);  //1 2 3 4 5 	&amp;#125;);  自己实现一个Array each方法，能遍历多维数组 1234567891011121314151617181920212223">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-14T15:19:35.381Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="遍历多维数组">
+<meta name="twitter:description" content="遍历多维数组 遍历一维数组（Array each方法） 1234var arr = [1,2,3,4,5];arr.forEach(function(item,index,array)&amp;#123;	alert(item);  //1 2 3 4 5 	&amp;#125;);  自己实现一个Array each方法，能遍历多维数组 1234567891011121314151617181920212223">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -136,36 +141,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-遍历多维数组" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      遍历多维数组
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/05/14/遍历多维数组/" class="archive-article-date">
+
+        
+        <a href="/blog/2018/05/14/遍历多维数组/" class="archive-article-date">
   	<time datetime="2018-05-14T14:55:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/05/14/遍历多维数组/">遍历多维数组</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="遍历多维数组"><a href="#遍历多维数组" class="headerlink" title="遍历多维数组"></a>遍历多维数组</h4><ul>
+<li><p>遍历一维数组（Array each方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5];</span><br><span class="line">arr.forEach(function(item,index,array)&#123;</span><br><span class="line">	alert(item);  //1 2 3 4 5 </span><br><span class="line">	&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>自己实现一个Array each方法，能遍历多维数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,[4,[5,[6]]]]</span><br><span class="line">Array.prototype.each = function(fn)&#123;</span><br><span class="line">	try&#123;</span><br><span class="line">		//1.遍历数组的每一项</span><br><span class="line">		this.i || (this.i = 0);     //初始化i(减少声明，ES5)</span><br><span class="line">		//2.判断什么时候走核心代码</span><br><span class="line">		if(this.each&gt;0 &amp;&amp; fn.constructor === Function)&#123;</span><br><span class="line">			//遍历</span><br><span class="line">			while(this.i &lt; this.length)&#123;     //while循环的范围</span><br><span class="line">				//获取数组的每一项</span><br><span class="line">				var e = this[this.i];</span><br><span class="line">				//如果当前元素获取到了，并且当前元素是一个数组</span><br><span class="line">				if(e &amp;&amp; e.constructor === Array)&#123;</span><br><span class="line">				//递归</span><br><span class="line">				e.each(fn);</span><br><span class="line">				&#125;else&#123;</span><br><span class="line">					//如果不是数组，即就是元素</span><br><span class="line">					//将数组元素传递给fn</span><br><span class="line">					fn.call(e,e);</span><br><span class="line">				&#125;</span><br><span class="line">				this.i++</span><br><span class="line">			&#125;</span><br><span class="line">			this.i = null;    //释放内存  垃圾回收机制</span><br><span class="line">		&#125;</span><br><span class="line">		&#125;catch(ex)&#123;</span><br><span class="line">             //do someting</span><br><span class="line">		&#125;</span><br><span class="line">		return this;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">arr.each(function(item)&#123;</span><br><span class="line">	alert(item);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -177,122 +208,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https:// keandfan.github.io/blog/2018/05/14/遍历多维数组/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/05/14/去除数组重复元素/" class="archive-article-date">
-  	<time datetime="2018-05-14T12:32:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2018/05/14/去除数组重复元素/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">去除数组重复元素</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/05/14/去除数组重复元素/">去除数组重复元素</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">js学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/05/14/ES6学习/" class="archive-article-date">
-  	<time datetime="2018-05-14T12:21:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/05/14/ES6学习/">ES6学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/05/14/U盘启动盘制作与系统安装/" class="archive-article-date">
-  	<time datetime="2018-05-14T09:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/05/14/U盘启动盘制作与系统安装/">U盘启动盘制作与系统安装</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">生活常用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -317,8 +332,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
